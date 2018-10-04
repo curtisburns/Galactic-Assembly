@@ -1,0 +1,377 @@
+body {
+  background: url('../images/arcadebackground.png') center/cover repeat;
+  position: relative;
+
+}
+.game {
+  position: relative;
+  top: 200px;
+  margin: auto;
+}
+
+
+.arcade-machine {
+  transform: translateX(50%);
+  position: absolute;
+  top: -348px;
+  left: -860px;
+}
+
+.playingField {
+  background-color: grey;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.planet1 {
+  position: absolute;
+  width: 200px;
+  height: 160px;
+  right: -120px;
+  top: 290px;
+  animation: planetMovement 120s linear forwards;
+  z-index: 1;
+}
+.planet2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: 100px;
+  top: 50px;
+  animation: planetMovement 180s linear forwards;
+  z-index: 0;
+}
+
+.foreground {
+  position: absolute;
+  right: -200px;
+  height:110px;
+  bottom: 0;
+  animation: foregroundMovement .2s linear infinite;
+  z-index: 0;
+}
+
+@keyframes planetMovement {
+  100% {
+    right: 1600px;
+  }
+}
+
+@keyframes foregroundMovement {
+  100% {
+    right: -80px;
+  }
+}
+
+.reset {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(60,60,60,0.5);
+  width: 100px;
+  height: 30px;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  position: absolute;
+  border-radius: 5%;
+  padding: 10px 0 0 5px;
+  text-align: center;
+  z-index: 999;
+}
+
+.start-mission:hover, .reset:hover {
+  box-shadow: inset 0px 0px 5px white;
+}
+
+.gameover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  text-align: center;
+  font-family: 'Press Start 2P';
+  text-align: center;
+}
+
+.gameover-text {
+  font-size: 25px;
+  position: absolute;
+  left: 280px;
+  top: 280px;
+  width: 400px;
+}
+
+.introScreen {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.playerSelectScreen {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+.player1Character {
+  box-sizing: border-box;
+  position: absolute;
+    background-color: black;
+    padding: 18px 0 0 15px;
+}
+
+.player1Heading {
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-family: 'Press Start 2P';
+}
+
+.player1Instructions {
+  font-size: 15px;
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-family: 'Press Start 2P';
+  bottom: 10px;
+  left: 60px;
+}
+
+.player2Instructions {
+  font-size: 15px;
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-family: 'Press Start 2P';
+  bottom: 10px;
+  right: 60px;
+}
+
+.player2Heading {
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-family: 'Press Start 2P';
+}
+
+.player1SelectLeft {
+  position: absolute;
+
+    background-color: green;
+}
+
+
+
+.player1SelectRight{
+  position: absolute;
+
+    background-color: blue;
+}
+
+.player2Mode, .selectMode {
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-family: 'Press Start 2P';
+  padding-top: 10px;
+}
+
+.player2Mode {
+  cursor: pointer;
+}
+
+.player2Character {
+  box-sizing: border-box;
+
+  position: absolute;
+    background-color: black;
+    padding: 18px 0 0 15px;
+}
+
+.player2SelectLeft {
+  position: absolute;
+
+  background-color: red;
+}
+
+.player2SelectRight {
+  position: absolute;
+
+  background-color: red;
+}
+
+.score-panel1, .score-panel2, .lives-panel1, .lives-panel2 {
+  position: absolute;
+  z-index: 999;
+}
+
+.p1-score-text, .p2-score-text, .p1-score, .p2-score,.p1-lives-text, .p2-lives-text, .p1-lives, .p2-lives {
+  color: white;
+  font-family: 'Press Start 2P';
+  font-size: 14px;
+}
+.p1-score-text, .p2-score-text {
+  width: 320px;
+}
+
+.chargeBarContainer {
+  width: 180px;
+  background-color: transparent;
+  position: absolute;
+  height: 10px;
+  border: 1px solid white;
+}
+
+.p1ChargeBar, .p2ChargeBar {
+  background-color: rgba(134,230,248,0.5);
+  position: absolute;
+  height: 100%;
+}
+
+
+.logo {
+  position: absolute;
+  animation: animateLogo 1s 3s forwards
+}
+
+@keyframes animateLogo{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* font-family: 'Press Start 2P', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Monoton', cursive; */
+/* font-family: 'Orbitron', sans-serif */
+.letter-g {
+  position: absolute;
+  animation: animateG 1s 3.5s forwards;
+}
+
+.alactic {
+  color: white;
+  position: absolute;
+  font-size: 100px;
+  font-family: Orbitron;
+  animation: animateAlactic 1s 4s backwards ease-out;
+}
+
+.letter-a {
+  position: absolute;
+  animation: animateA 1s 3.5s forwards;
+}
+
+.ssembly {
+  color: white;
+  position: absolute;
+  font-size: 100px;
+  font-family: Orbitron;
+  animation: animateSsembly 1s 4.8s backwards ease-out;
+}
+
+.a-hole {
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 2s;
+  animation: animateAHole 0.5s backwards 4.5s;
+  z-index: 1000;
+}
+@keyframes animateAHole {
+  0% {
+    opacity: 0;
+  }
+}
+
+.animate-a-hole {
+    transform: scale(50);
+}
+
+.start-game-button {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-family: 'Press Start 2P';
+  cursor: pointer;
+  animation: flash 1s infinite;
+  text-align: center;
+  width: 300px;
+  z-index: 999;
+}
+
+.start-mission {
+  box-sizing: border-box;
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  font-family: 'Press Start 2P';
+  cursor: pointer;
+  text-align: center;
+  background-color: rgba(60,60,60,1);
+  border-radius: 3%;
+  padding-top: 5px;
+  z-index: 999;
+}
+
+
+
+@keyframes flash{
+  0%,40% {
+    color: transparent;
+  }
+  40%,100% {
+    color: white;
+  }
+}
+
+
+@keyframes animateSsembly {
+  from {
+    left: 1000px;
+  }
+}
+
+@keyframes animateG {
+  100% {
+    top: 0px;
+    left: 150px;
+  }
+}
+
+@keyframes animateA {
+  100% {
+    top: 230px;
+    left: 220px;
+  }
+}
+
+@keyframes animateAlactic {
+  from {
+    left: 1000px;
+  }
+}
+
+
+
+
+.player1, .player2 {
+  position: absolute;
+  z-index: 2;
+  /* transition: top .05s linear, left .05s linear 0s; */
+}
+
+
+.lvl1,.lvl2, .lvl3, .lvlMax{
+  position: absolute;
+  z-index:2
+}
+
+.type1, .type2, .type3, .type4, .type5, .type6,.type7, .type8, .type9 {
+  position: absolute;
+  z-index: 1;
+}
