@@ -89,4 +89,4 @@ As always, a project is never really finished, and I have so many more ideas for
   * Local storage scoreboard
   * Determine the highest scorer on game over/level completion in 2 player mode.
   * Add invincibility graphic
-  * Add phone functionality (virtual gamepad/joystick?)
+  * ~Add phone functionality (virtual gamepad/joystick?)~
