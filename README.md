@@ -6,8 +6,6 @@
 
 [Play the Galactic Assembly Arcade Game on GitHub Pages](https://curtisburns.github.io/wdi-project-one/)
 
-[View the Galactic Assembly Arcade Game on GitHub](https://github.com/curtisburns/wdi-project-one)
-
 
 
 # Game instructions
